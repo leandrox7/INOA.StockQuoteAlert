@@ -7,9 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INOA.StockQuoteAlert.Presen
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INOA.StockQuoteAlert.Domain", "INOA.StockQuoteAlert.Domain\INOA.StockQuoteAlert.Domain.csproj", "{89794F06-93A6-4731-B711-B0BDBD436621}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INOA.StockQuoteAlert.Application", "INOA.StockQuoteAlert.Application\INOA.StockQuoteAlert.Application.csproj", "{1274FA26-AA5D-475F-ADB9-784AD8FF4634}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INOA.StockQuoteAlert.Infra", "INOA.StockQuoteAlert.Infra\INOA.StockQuoteAlert.Infra.csproj", "{AD0DD305-ED73-4AC7-9574-3CCB276093B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockQuoteAlert.ApplicationWorker", "StockQuoteAlert.ApplicationWorker\StockQuoteAlert.ApplicationWorker.csproj", "{FBBDF608-1F68-480C-BA41-11B8DDF7BC6E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +25,14 @@ Global
 		{89794F06-93A6-4731-B711-B0BDBD436621}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89794F06-93A6-4731-B711-B0BDBD436621}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89794F06-93A6-4731-B711-B0BDBD436621}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1274FA26-AA5D-475F-ADB9-784AD8FF4634}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1274FA26-AA5D-475F-ADB9-784AD8FF4634}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1274FA26-AA5D-475F-ADB9-784AD8FF4634}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1274FA26-AA5D-475F-ADB9-784AD8FF4634}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AD0DD305-ED73-4AC7-9574-3CCB276093B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AD0DD305-ED73-4AC7-9574-3CCB276093B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD0DD305-ED73-4AC7-9574-3CCB276093B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD0DD305-ED73-4AC7-9574-3CCB276093B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBBDF608-1F68-480C-BA41-11B8DDF7BC6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBBDF608-1F68-480C-BA41-11B8DDF7BC6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBBDF608-1F68-480C-BA41-11B8DDF7BC6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBBDF608-1F68-480C-BA41-11B8DDF7BC6E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

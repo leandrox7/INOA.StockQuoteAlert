@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-StockQuoteAlert.ApplicationWorker-333b4ff4-09ee-4979-8375-35eb5b2305e7</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\INOA.StockQuoteAlert.Domain\INOA.StockQuoteAlert.Domain.csproj" />
+    <ProjectReference Include="..\INOA.StockQuoteAlert.Infra\INOA.StockQuoteAlert.Infra.csproj" />
+  </ItemGroup>
+</Project>
