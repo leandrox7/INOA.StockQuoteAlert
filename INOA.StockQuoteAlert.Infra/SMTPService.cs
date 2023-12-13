@@ -1,4 +1,6 @@
 ﻿
+using System.Net;
+using System.Net.Mail;
 using INOA.StockQuoteAlert.Domain;
 using MailKit.Security;
 using MimeKit;
@@ -15,6 +17,7 @@ namespace INOA.StockQuoteAlert.Infra
 
         }
 
+        
         public async Task SendEmailAsync(string to, string subject, string body)
 		{
 
@@ -28,12 +31,12 @@ namespace INOA.StockQuoteAlert.Infra
 
             using (var client = new MailKit.Net.Smtp.SmtpClient())
             {
-                await client.ConnectAsync(_emailSettings.SmtpServer, _emailSettings.SmtpPort, SecureSocketOptions.StartTls);
-                await client.AuthenticateAsync(_emailSettings.SmtpUsername, _emailSettings.SmtpPassword);
-                await client.SendAsync(message);
-                await client.DisconnectAsync(true);
+                client.Connect(_emailSettings.SmtpServer, _emailSettings.SmtpPort, SecureSocketOptions.StartTls);
+                 client.Authenticate(_emailSettings.SmtpUsername, _emailSettings.SmtpPassword);
+                 client.Send(message);
+                 client.Disconnect(true);
             }
-
+            
         }
 
     }

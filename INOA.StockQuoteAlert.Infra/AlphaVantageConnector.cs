@@ -28,7 +28,7 @@ namespace INOA.StockQuoteAlert.Infra
         {
             _logger.LogInformation("StockQuoteAlert.Infra.AlphaVantageConnector.GetQuote");
 
-            /*   var response = await _httpClient.GetAsync($"{_url}query?function=GLOBAL_QUOTE&symbol={quoteCode}.SA&apikey={_apiKey}");
+               var response = await _httpClient.GetAsync($"{_url}query?function=GLOBAL_QUOTE&symbol={quoteCode}.SA&apikey={_apiKey}");
 
                response.EnsureSuccessStatusCode();
 
@@ -44,10 +44,10 @@ namespace INOA.StockQuoteAlert.Infra
 
                GlobalQuoteResponse result = JsonSerializer.Deserialize<GlobalQuoteResponse>(stream) ?? throw new ArgumentException("");
                _logger.LogInformation($"StockQuoteAlert.Infra.AlphaVantageConnector.GetQuote Result price {result?.GlobalQuote?.Price}");
-             */
-            string jsonString = "{ \"Global Quote\": { \"01. symbol\": \"PETR4.SA\", \"02. open\": \"34.5500\", \"03. high\": \"34.6000\", \"04. low\": \"33.8000\", \"05. price\": \"34.0800\", \"06. volume\": \"30371500\", \"07. latest trading day\": \"2023-12-12\", \"08. previous close\": \"34.3600\", \"09. change\": \"-0.2800\", \"10. change percent\": \"-0.8149%\" } }";
 
-            GlobalQuoteResponse result = JsonSerializer.Deserialize<GlobalQuoteResponse>(jsonString);
+            // caso atinja o limite de requests diários da API, você pode mockar com a linha abaixo!
+            //string jsonString = "{ \"Global Quote\": { \"01. symbol\": \"PETR4.SA\", \"02. open\": \"34.5500\", \"03. high\": \"34.6000\", \"04. low\": \"33.8000\", \"05. price\": \"34.0800\", \"06. volume\": \"30371500\", \"07. latest trading day\": \"2023-12-12\", \"08. previous close\": \"34.3600\", \"09. change\": \"-0.2800\", \"10. change percent\": \"-0.8149%\" } }";
+           // GlobalQuoteResponse result = JsonSerializer.Deserialize<GlobalQuoteResponse>(jsonString);
 
                return result.GlobalQuote;
 

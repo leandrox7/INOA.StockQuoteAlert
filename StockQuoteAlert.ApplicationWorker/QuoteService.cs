@@ -10,6 +10,7 @@ namespace INOA.StockQuoteAlert.ApplicationWorker
 		private readonly EmailSettings _emailSettings;
 		private readonly IAlphaVantageConnector _connector;
         private readonly IMailService _mailService;
+        private decimal lastPrice;
 
 		public QuoteService(ILogger<QuoteService> logger, IAlphaVantageConnector connector, IMailService mailService, EmailSettings emailSettings)
         {
@@ -17,6 +18,7 @@ namespace INOA.StockQuoteAlert.ApplicationWorker
             _connector = connector;
             _mailService = mailService;
             _emailSettings = emailSettings;
+            lastPrice = 0;
         }
 
         public async void Monitoring(string quoteCode, decimal sellPrice, decimal buyPrice)
@@ -45,6 +47,8 @@ namespace INOA.StockQuoteAlert.ApplicationWorker
 
         private void QuoteDecisor(GlobalQuoteData quote, decimal sellPrice, decimal buyPrice)
         {
+            if (lastPrice == Convert.ToDecimal(quote.Price))
+                return;
 
             if (Convert.ToDecimal(quote.Price) > sellPrice)
 			{
@@ -60,6 +64,8 @@ namespace INOA.StockQuoteAlert.ApplicationWorker
 					_mailService.SendAlertBuyQuoteAsync(_emailSettings.DestinationEmail, _emailSettings.BuyTitle, $"BUY QUOTE {quote.Symbol} - PRICE: {quote.Price}");
 
             }
+
+            lastPrice = Convert.ToDecimal(quote.Price);
 		}
 
 
