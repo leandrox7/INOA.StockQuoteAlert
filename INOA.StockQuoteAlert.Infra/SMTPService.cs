@@ -1,7 +1,5 @@
-﻿using System;
-using System.Net.Mail;
+﻿
 using INOA.StockQuoteAlert.Domain;
-using MailKit.Net.Smtp;
 using MailKit.Security;
 using MimeKit;
 

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INOA.StockQuoteAlert.Infra"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockQuoteAlert.ApplicationWorker", "StockQuoteAlert.ApplicationWorker\StockQuoteAlert.ApplicationWorker.csproj", "{FBBDF608-1F68-480C-BA41-11B8DDF7BC6E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INOA.StockQuoteAlert.Test", "INOA.StockQuoteAlert.Test\INOA.StockQuoteAlert.Test.csproj", "{817315E8-2C1C-4378-9A69-1760C81B18CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{FBBDF608-1F68-480C-BA41-11B8DDF7BC6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBBDF608-1F68-480C-BA41-11B8DDF7BC6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBBDF608-1F68-480C-BA41-11B8DDF7BC6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{817315E8-2C1C-4378-9A69-1760C81B18CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{817315E8-2C1C-4378-9A69-1760C81B18CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{817315E8-2C1C-4378-9A69-1760C81B18CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{817315E8-2C1C-4378-9A69-1760C81B18CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

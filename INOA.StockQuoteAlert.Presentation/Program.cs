@@ -16,9 +16,14 @@ internal class Program
       //dotnet run PETR4 22.5 24.9
         Console.WriteLine("Start App");
         Console.WriteLine();
+        /*
         string quote = args[0];
         string sBuyPrice = args[1];
         string sSellPrice = args[2];
+        */
+        string quote = "PETR4";
+        string sBuyPrice = "22.5";
+        string sSellPrice = "24.9";
 
         if (String.IsNullOrEmpty(quote))
             Console.WriteLine("Entrada invalida! => quote");
@@ -58,7 +63,7 @@ internal class Program
                        // Registre o IAlphaVantageConnector
                        services.AddTransient<IAlphaVantageConnector, AlphaVantageConnector>();
 
-                       var emailSettings = hostContext.Configuration.GetSection("EmailConfiguration").Get<EmailSettings>();
+                       var emailSettings = hostContext.Configuration.GetSection("EmailSettings").Get<EmailSettings>();
                        services.AddSingleton(emailSettings);
 
                        // Registre o ISMTPService

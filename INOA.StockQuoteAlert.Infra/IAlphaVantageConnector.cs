@@ -5,7 +5,7 @@ namespace INOA.StockQuoteAlert.Infra
 {
 	public interface IAlphaVantageConnector
 	{
-        public  Task<GlobalQuote> GetGlobalQuoteAsync(string quoteCode);
+        public  Task<GlobalQuoteData> GetGlobalQuoteAsync(string quoteCode);
 
 
     }

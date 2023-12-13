@@ -9,7 +9,13 @@ namespace INOA.StockQuoteAlert.Domain
         public string? SmtpPassword { get; set; }
         public string? SenderName { get; set; }
         public string? SenderAddress { get; set; }
-    
-	}
+        public string? DestinationEmail { get; set; }
+        public string? BuyTitle { get; set; }
+        public string? SellTitle { get; set; }
+
+
+
+
+    }
 }
 
